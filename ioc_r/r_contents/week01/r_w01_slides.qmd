@@ -378,7 +378,7 @@ relative path: `data`
 
 ## Import Data {.smaller}
 
-Importing your first file: [shiny_sample_data.csv](https://raw.githubusercontent.com/InforBio/ioc-r-2026/refs/heads/dev-r/ioc_r/exos_data/shiny_sample_data.csv)
+Importing your first file: [shiny_sample_data.csv](https://raw.githubusercontent.com/InforBio/iot-r-2026/refs/heads/main/ioc_r/r_contents/exos_data/shiny_sample_data.csv)
 
 1. Right click the link and select "Download Linked File As..." (or the equivalent on your system).
 2. Save the file into the `data` folder of the R project `r_week1`
@@ -448,8 +448,7 @@ Once you've cleaned, analyzed, or modified a dataset in R, you'll want to save i
 
 - Google it!
 - Forums: Stack Overflow, [Cirad](https://forums.cirad.fr/logiciel-R/)(francophone), *etc.*
-- Ask/discuss your question via Slack.
-- AI tools (like ChatGPT or Gemini) can be very helpful resources😉, but be careful of false answers! (More details in session 6)
+- Ask/discuss your question via Tchap.
 
 **Key points**:
 
