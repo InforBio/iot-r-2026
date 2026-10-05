@@ -29,7 +29,7 @@ The R script is available here:
 
 ## Data Types in R
 
-Create variables to store the following types of biological data and check their class in R:
+Create variables to store the following types of biological data and check their type in R:
 
 1. The name of a gene (e.g., *BRCA1*).
 2. The number of samples in an experiment (e.g., 50).
@@ -37,17 +37,17 @@ Create variables to store the following types of biological data and check their
 4. The four bases in DNA sequence: "A", "T", "G", "C".
 
 ```{r}
-gene_name <- "BRCA1" 
-is.character(gene_name)
+gene_name <- "BRCA1"
+typeof(gene_name)
 
-num_samples <- 50    
-is.numeric(num_samples)
+num_samples <- 50
+typeof(num_samples)
 
-is_treated <- TRUE  
-is.logical(is_treated)
+is_treated <- TRUE
+typeof(is_treated)
 
-dna_bases <- c("A", "T", "G", "C") 
-is.character(dna_bases)
+dna_bases <- c("A", "T", "G", "C")
+typeof(dna_bases)
 ```
 
 ## Vectors

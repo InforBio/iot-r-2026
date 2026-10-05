@@ -46,14 +46,8 @@ log2()
 
 help()  
 `NA`  
-is.numeric()  
-is.double()  
-is.integer()  
-as.numeric()  
-tyoeof()  
-is.character()  
-as.character()  
-is.logical()  
+typeof()
+as.numeric()
   
 c()
 `:`     

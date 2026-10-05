@@ -26,25 +26,24 @@ Which of these are **valid, good-practice** variable names in R, and which are n
 
 ## 2. Data types
 
-For each variable below, what does `class()` (or the type-check function) return: `is.numeric()`, `is.character()`, `is.logical()`?
+What does `typeof()` return for each variable? Guess first, then check in R.
 
 ```r
-a <- 3
-b <- 3L
-c_val <- "3"
-d <- TRUE
+w <- 3
+x <- 3L
+y <- "3"
+z <- TRUE
 ```
 
 ::: {.answer}
 ```r
-is.numeric(a)       # TRUE, it's a double
-is.numeric(b)       # TRUE, an integer is also numeric
-is.integer(b)       # TRUE
-is.character(c_val) # TRUE, "3" is quoted, so it's text, not a number
-is.logical(d)       # TRUE
+typeof(w)  # "double"
+typeof(x)  # "integer"
+typeof(y)  # "character", the quotes make it text
+typeof(z)  # "logical"
 ```
 
-Key point: `is.numeric()` is `TRUE` for both doubles and integers, `typeof()`/`is.double()`/`is.integer()` are needed to tell them apart.
+Key point: `3`, `3L`, and `"3"` look alike but are three different types.
 :::
 
 ## 3. Coercion in vectors
