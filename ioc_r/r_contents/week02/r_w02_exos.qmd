@@ -143,6 +143,9 @@ geneC_expression <- expression_levels["geneC", ]
 # Subset samples with geneC > 20
 high_geneC_samples <- geneC_expression[geneC_expression > 20]
 high_geneC_samples
+
+# Or at once
+expression_levels["geneC", expression_levels["geneC", ] > 20]
 ```
 
 

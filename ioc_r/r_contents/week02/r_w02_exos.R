@@ -9,7 +9,7 @@
 ## Data Types in R -------------------------------------------------------------
 
 ## Create variables to store the following types of biological data and
-## check their class in R:
+## check their data type in R:
 # 1. The name of a gene (e.g., *BRCA1*).
 # 2. The number of samples in an experiment (e.g., 50).
 # 3. Whether a sample is treated or not (select between TRUE/FALSE).
