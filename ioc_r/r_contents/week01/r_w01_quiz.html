@@ -318,7 +318,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>You’ve just imported a dataset into an object called <code>counts</code>. Write the R code to:</p>
 <ol type="a">
 <li>check its dimensions (number of rows/columns)</li>
-<li>check the storage <code>mode</code> of the column <code>counts[["WT.2"]]</code></li>
+<li>check the storage <code>typeof</code> of the column <code>counts[["WT.2"]]</code></li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled" title="Show answer">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
@@ -336,8 +336,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(counts)</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># b.</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">mode</span>(counts[[<span class="st">"WT.2"</span>]])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><code>dim()</code> returns <code>c(nrow, ncol)</code>. <code>mode()</code> tells you the basic storage type of the data (e.g.&nbsp;<code>"numeric"</code>, <code>"character"</code>).</p>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(counts[[<span class="st">"WT.2"</span>]])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><code>dim()</code> returns <code>c(nrow, ncol)</code>. <code>typeof()</code> tells you the basic storage type of the data (e.g.&nbsp;<code>"numeric"</code>, <code>"character"</code>).</p>
 </div>
 </div>
 </div>

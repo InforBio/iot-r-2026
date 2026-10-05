@@ -310,12 +310,12 @@ Note
 <p>In the “Environment” panel, click on the tabular icon next to the dataset to visualize the it.</p>
 <p>We can extract all gene expressions for the sample named “WT.2” using <code>counts[["WT.2"]]</code>.</p>
 <ol start="3" type="1">
-<li>Try <code>mode()</code> on the expression data for “WT.2”, what does it return?</li>
+<li>Try <code>typeof()</code> on the expression data for “WT.2”, what does it return?</li>
 </ol>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mode</span>(counts[[<span class="st">"WT.2"</span>]])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(counts[[<span class="st">"WT.2"</span>]])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "numeric"</code></pre>
+<pre><code>[1] "double"</code></pre>
 </div>
 </div>
 <ol start="4" type="1">
