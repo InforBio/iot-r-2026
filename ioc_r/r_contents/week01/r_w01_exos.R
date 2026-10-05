@@ -71,8 +71,8 @@ dim(counts)
 ## We can extract all gene expressions for the sample named “WT.2” using counts[["WT.2"]].
 counts[["WT.2"]]
 
-# 3. Try mode() on the expression data for “WT.2”, what does it return?
-mode(counts[["WT.2"]])
+# 3. Try typeof() on the expression data for “WT.2”, what does it return?
+typeof(counts[["WT.2"]])
 
 
 # 4.Calculate the average expression (mean()) and

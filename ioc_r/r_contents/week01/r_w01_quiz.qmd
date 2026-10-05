@@ -65,7 +65,7 @@ Which `{readr}` function would you use to **import** a CSV file into R as a data
 You've just imported a dataset into an object called `counts`. Write the R code to:
 
 a. check its dimensions (number of rows/columns)
-b. check the storage `mode` of the column `counts[["WT.2"]]`
+b. check the storage `typeof` of the column `counts[["WT.2"]]`
 
 ::: {.answer}
 ```r
@@ -73,10 +73,10 @@ b. check the storage `mode` of the column `counts[["WT.2"]]`
 dim(counts)
 
 # b.
-mode(counts[["WT.2"]])
+typeof(counts[["WT.2"]])
 ```
 
-`dim()` returns `c(nrow, ncol)`. `mode()` tells you the basic storage type of the data (e.g. `"numeric"`, `"character"`).
+`dim()` returns `c(nrow, ncol)`. `typeof()` tells you the basic storage type of the data (e.g. `"numeric"`, `"character"`).
 :::
 
 ## 6. Summary statistics

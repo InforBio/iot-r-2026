@@ -32,7 +32,7 @@ View()
 readr::write_csv()  
 
 dim()  
-mode()  
+typeof()  
 sd()  
 summary()  
 \*hist()  
