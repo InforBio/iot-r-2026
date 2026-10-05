@@ -63,23 +63,24 @@ A box labeled "x" containing the number 1.
 A box labeled "char_name" containing the platform name "InforBio".
 :::
 
-## Variable Naming Convention {.smaller}
+## Variable Naming {.smaller}
 
 ::: columns
-::: {.column .content-smaller}
+::: {.column}
+**Rules**
+
+- Names must start with a letter.
+- Names cannot contain spaces or special characters (such as `!`, `#`, or `-`).
+- Reserved words (e.g., `if`, `function`, `TRUE`, `NULL`) cannot be used as names.
+:::
+
+::: {.column}
+
+**Conventions** (tidyverse style)
+
 - Choose a short and descriptive name
-- Use snake_case (lowercase letters and underscores only)
-- Avoid special characters (such as `!`, `#`, ) and spaces
-- Do not start a name with numbers
-- Avoid reserved keywords in R (*e.g.*, function, if, TRUE)
-- Do not overwrite built-in functions (*e.g.*, mean, sd)
-:::
-
-::: {.column .fragment}
-
-:::{.callout-tip .narrow-callout appearance="simple" title="Quiz Time!"}
-Click [here](https://app.wooclap.com/ZCRSNB?from=instruction-slide) to start the quiz.
-:::
+- Use snake_case (lowercase letters, numbers and underscores only)
+- Don't overwrite built-in functions (*e.g.*, mean, sd)
 
 :::
 :::
@@ -90,6 +91,10 @@ How to know if a variable name was already used?
 - Type `help(reserved)` to check reserved words in R.
 - Check in "Environment" pane.
 - Type the first letters of a name and press the **Tab** key to trigger autocompletion
+:::
+
+:::{.callout-tip .fragment .narrow-callout appearance="simple" title="Quiz Time!"}
+Click [here](https://app.wooclap.com/ZCRSNB?from=instruction-slide) to start the quiz.
 :::
 
 ::: {.notes}
@@ -108,7 +113,7 @@ How R understands and stores information?
 . . .
 
 ::: {.columns}
-::: {.column}
+::: {.column width="60%"}
 Main data types:
 
 - Numeric
@@ -118,7 +123,7 @@ Main data types:
 - Logical (boolean): `TRUE`, `FALSE`
 - Factor: for categorical data
 :::
-::: {.column}
+::: {.column width="40%"}
 
 ::: {.callout-note .fragment appearance="simple"}
 - We'll see factor next week.
@@ -132,25 +137,31 @@ Main data types:
 
 ::: columns
 ::: {.column}
-- **Double** (default): used for numbers with decimal points or without.
+- **Double** (the default): any number you type, with or without decimals.
 
 ```{r}
-a <- 3
-is.numeric(a)
-is.double(a)
-typeof(a)
+x <- 3.5
+typeof(x)
+
+y <- 3
+typeof(y)
 ```
 
 :::
 
 ::: {.column}
-- If you explicitly want an **integer** (whole numbers), you can define it by appending an `L` to the number:
+- **Integer**: whole numbers, created by adding `L`.
 
 ```{r}
-b <- 3L
-is.numeric(b)
-is.integer(b)
-typeof(b)
+z <- 3L
+typeof(z)
+```
+
+Both are numeric:
+
+```{r}
+is.numeric(y)
+is.numeric(z)
 ```
 
 :::
@@ -158,17 +169,21 @@ typeof(b)
 
 ## Character {.smaller}
 
-R stores text (strings) as character. Use **quotation marks** to indicate a value is character.
+R stores text (strings) as character. Use **quotation marks**, double or single:
 
 ```{r}
-# enclosed in either double quotes (") or single quotes (')
 x <- "I love R"
 x
 
-is.character(x)
+typeof(x)
+
+y <- 'InforBio'
+typeof(y)
 ```
 
 . . .
+
+Why error?
 
 ```{r}
 #| error: true
@@ -178,36 +193,33 @@ is.character(x)
 
 . . .
 
-```{r}
-as.numeric("1") + as.numeric("2")  # convert to numeric
-```
-
-. . .
+Numbers in quotes are text, convert them to numbers first:
 
 ```{r}
-as.character(1) # convert to character
+as.numeric("1") + as.numeric("2")
 ```
+
 
 ## Logical {.smaller}
 
-- Only two possible values for logical data: `TRUE` or `FALSE`.
-
-- Can be written as `T` or `F`, but never in other formats (*e.g.*: `True`, `true`)
+Only two possible values: `TRUE` or `FALSE` (all capitals).
 
 ```{r}
 #| error: true
 
-is.logical(TRUE)
-is.logical(T)
-is.logical(True)
+typeof(TRUE)
+typeof(True)   # R looks for a variable called True
 ```
 
-- Can be obtained from logical statements, *e.g.*:
+Logical values usually come from comparisons:
 
 ```{r}
 2 > 1
 ```
 
+:::{.callout-tip appearance="simple"}
+You may see `T` and `F` in other code, but write `TRUE` and `FALSE`: `T` and `F` can be overwritten.
+:::
 
 # Data Strucutres
 
@@ -420,7 +432,7 @@ num_vec[logical_vec]
 
 
 ```{r}
-# create logical vect using comparison operator
+# create logical vector using comparison operator
 num_vec < 3
 
 # then use it to extract values from the numeric vector
@@ -459,7 +471,6 @@ num_vec[num_vec > 3]
 gene_expr <- c(15, 19, 14, 3, 10) 
 
 # check the structure
-is.numeric(gene_expr)
 str(gene_expr)
 
 # vector length
