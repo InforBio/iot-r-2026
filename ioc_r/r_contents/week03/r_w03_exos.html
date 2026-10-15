@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.18">
+<meta name="generator" content="quarto-1.10.19">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -78,7 +78,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../../site_libs/bootstrap/bootstrap-55617497126496852ff9f5a59253c640.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -456,10 +456,10 @@ FC = \frac{Mean&nbsp;Expression&nbsp;in&nbsp;Group&nbsp;2}{Mean&nbsp;Expression&
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wilcox.test</span>(expr_wt, expr_set1)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
-    Wilcoxon rank sum test with continuity correction
+    Wilcoxon rank sum exact test
 
 data:  expr_wt and expr_set1
-W = 0, p-value = 0.0001817
+W = 0, p-value = 1.083e-05
 alternative hypothesis: true location shift is not equal to 0</code></pre>
 </div>
 </div>
@@ -647,7 +647,7 @@ sample3     3     6</code></pre>
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Check out this cheat sheet for the basic R commands: <a href="https://iqss.github.io/dss-workshops/R/Rintro/base-r-cheat-sheet.pdf">Base R Cheat Sheet</a></p>
+<p>Check out this cheat sheet for the basic R commands: <a href="https://rstudio.github.io/cheatsheets/base-r.pdf">Base R Cheat Sheet</a></p>
 </div>
 </div>
 <hr>
