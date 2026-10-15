@@ -250,7 +250,7 @@ my_list[["gene_description"]] <- c(
 
 ::: {.callout-note title="Bonus!"}
 Check out this cheat sheet for the basic R commands:
-[Base R Cheat Sheet](https://iqss.github.io/dss-workshops/R/Rintro/base-r-cheat-sheet.pdf)
+[Base R Cheat Sheet](https://rstudio.github.io/cheatsheets/base-r.pdf)
 :::
 
 ---
